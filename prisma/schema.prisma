@@ -40,3 +40,37 @@ model EnrolledCourses {
   updatedAt  DateTime @updatedAt
   isActive   Boolean? @default(true)
 }
+
+model Employee {
+  id            Int           @id @default(autoincrement())
+  employee_name String?
+  createdAt     DateTime?      @default(now())
+  updatedAt     DateTime?      @updatedAt
+  EmployeeExp   EmployeeExp[]
+  isActive Boolean? @default(true)
+}
+
+model EmployeeExp {
+  id          Int      @id @default(autoincrement())
+  company     String?
+  year_of_exp Float?
+  emp_id      Int?
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @updatedAt
+  Employee    Employee @relation(fields: [employee_id], references: [id])
+  employee_id Int
+  isActive Boolean @default(true)
+  ExpEndorsed ExpEndorsed[]
+}
+
+model ExpEndorsed {
+  id Int @id @default(autoincrement())
+  EmployeeExp EmployeeExp @relation(fields: [emp_exp], references: [id])
+  emp_exp Int
+  endoresedBy String?
+  endorsed String? 
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+  isActive Boolean? @default(true)
+
+}

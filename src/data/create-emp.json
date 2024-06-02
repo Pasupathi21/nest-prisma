@@ -1,0 +1,43 @@
+{
+    "employee": {
+        "employee_name": "John Doe",
+        "isActive": true,
+        "EmployeeExp": {
+            "create": [
+                {
+                    "company": "Company A",
+                    "year_of_exp": 5.0,
+                    "isActive": true,
+                    "ExpEndorsed": {
+                        "create": [
+                            {
+                                "endoresedBy": "Jane Smith",
+                                "endorsed": "Yes",
+                                "isActive": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "company": "Company B",
+                    "year_of_exp": 3.0,
+                    "isActive": true,
+                    "ExpEndorsed": {
+                        "create": [
+                            {
+                                "endoresedBy": "Tom Johnson",
+                                "endorsed": "Yes",
+                                "isActive": true
+                            },
+                            {
+                                "endoresedBy": "Sara Davis",
+                                "endorsed": "No",
+                                "isActive": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

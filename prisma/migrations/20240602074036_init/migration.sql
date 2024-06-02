@@ -1,0 +1,10 @@
+-- AlterTable
+ALTER TABLE "Employee" ALTER COLUMN "employee_name" DROP NOT NULL,
+ALTER COLUMN "createdAt" DROP NOT NULL,
+ALTER COLUMN "updatedAt" DROP NOT NULL,
+ALTER COLUMN "isActive" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "ExpEndorsed" ALTER COLUMN "createdAt" DROP NOT NULL,
+ALTER COLUMN "updatedAt" DROP NOT NULL,
+ALTER COLUMN "isActive" DROP NOT NULL;

@@ -1,0 +1,38 @@
+// Nest data update
+{
+    "employee": {
+        "employee_name": "John Doe 111",
+        "isActive": true,
+        "EmployeeExp": {
+            "update": [
+                {
+                    "where": {
+                        "id": 1
+                    },
+                    "data": {
+                        "company": "Company AAA",
+                        "year_of_exp": 4.0,
+                        "ExpEndorsed": {
+                            "update": [
+                                {
+                                    "where": {
+                                        "id": 1
+                                    },
+                                    "data": {
+                                        "endoresedBy": "Jane Smith",
+                                        "endorsed": "No/Yes",
+                                        "isActive": true
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "create": {
+                "company": "Company C",
+                "year_of_exp": 1
+            }
+        }
+    }
+}
